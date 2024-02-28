@@ -6,17 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.github.maxicorrea.applicationdesktopbackend.adapters.output.persistense.ApplicationDesktopRepository;
-import com.github.maxicorrea.applicationdesktopbackend.adapters.output.persistense.inmemory.ApplicationDesktopInMemoryRepository;
-
-
 @SpringBootApplication
 public class ApplicationDesktopBackendApplication {
-
-  @Bean
-  public ApplicationDesktopRepository applicationDesktopRepository() {
-    return new ApplicationDesktopInMemoryRepository();
-  }
 
   public static void main(String[] args) {
     SpringApplication.run(ApplicationDesktopBackendApplication.class, args);

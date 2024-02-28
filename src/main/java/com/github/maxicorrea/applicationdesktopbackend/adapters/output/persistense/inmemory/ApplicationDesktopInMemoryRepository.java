@@ -2,12 +2,15 @@ package com.github.maxicorrea.applicationdesktopbackend.adapters.output.persiste
 
 import java.util.ArrayList;
 import java.util.List;
-
+import org.springframework.context.annotation.Profile;
 import com.github.maxicorrea.applicationdesktopbackend.adapters.output.persistense.ApplicationDesktopRepository;
+import com.github.maxicorrea.applicationdesktopbackend.common.Persistence;
 import com.github.maxicorrea.applicationdesktopbackend.domain.App;
 import com.github.maxicorrea.applicationdesktopbackend.domain.Feedback;
 import com.github.maxicorrea.applicationdesktopbackend.domain.Menu;
 
+@Persistence
+@Profile("default")
 public class ApplicationDesktopInMemoryRepository implements ApplicationDesktopRepository {
 
   private static final String IMAGE_BASE64 =
