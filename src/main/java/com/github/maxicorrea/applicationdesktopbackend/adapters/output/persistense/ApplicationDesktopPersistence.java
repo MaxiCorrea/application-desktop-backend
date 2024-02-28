@@ -9,20 +9,20 @@ import com.github.maxicorrea.applicationdesktopbackend.domain.Menu;
 @Persistence
 public class ApplicationDesktopPersistence implements LoadMenuOutputPort, SaveFeedbackOutputPort {
 
-	private final ApplicationDesktopRepository applicationDesktopRepository;
+  private final ApplicationDesktopRepository applicationDesktopRepository;
 
-	public ApplicationDesktopPersistence(ApplicationDesktopRepository applicationDesktopRepository) {
-		this.applicationDesktopRepository = applicationDesktopRepository;
-	}
+  public ApplicationDesktopPersistence(ApplicationDesktopRepository applicationDesktopRepository) {
+    this.applicationDesktopRepository = applicationDesktopRepository;
+  }
 
-	@Override
-	public void save(Feedback feedback) {
-		applicationDesktopRepository.save(feedback);
-	}
+  @Override
+  public void save(Feedback feedback) {
+    applicationDesktopRepository.save(feedback);
+  }
 
-	@Override
-	public Menu load() {
-		return applicationDesktopRepository.load();
-	}
+  @Override
+  public Menu load() {
+    return applicationDesktopRepository.load();
+  }
 
 }

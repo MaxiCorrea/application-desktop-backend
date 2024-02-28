@@ -8,15 +8,15 @@ import com.github.maxicorrea.applicationdesktopbackend.domain.Feedback;
 @UseCase
 public class SendFeedbackUseCase implements SendFeedbackInputPort {
 
-	private final SaveFeedbackOutputPort feedbackOutputPort;
-	
-	public SendFeedbackUseCase(SaveFeedbackOutputPort feedbackOutputPort) {
-		this.feedbackOutputPort = feedbackOutputPort;
-	}
-	
-	@Override
-	public void send(Feedback feedback) {
-		feedbackOutputPort.save(feedback);
-	}
+  private final SaveFeedbackOutputPort feedbackOutputPort;
+
+  public SendFeedbackUseCase(SaveFeedbackOutputPort feedbackOutputPort) {
+    this.feedbackOutputPort = feedbackOutputPort;
+  }
+
+  @Override
+  public void send(Feedback feedback) {
+    feedbackOutputPort.save(feedback);
+  }
 
 }

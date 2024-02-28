@@ -8,15 +8,15 @@ import com.github.maxicorrea.applicationdesktopbackend.domain.Menu;
 @UseCase
 public class GetMenuUseCase implements DisplayMenuInputPort {
 
-	private final LoadMenuOutputPort loadMenuOutputPort;
+  private final LoadMenuOutputPort loadMenuOutputPort;
 
-	public GetMenuUseCase(LoadMenuOutputPort loadMenuOutputPort) {
-		this.loadMenuOutputPort = loadMenuOutputPort;
-	}
-	
-	@Override
-	public Menu display() {
-		return loadMenuOutputPort.load();
-	}
+  public GetMenuUseCase(LoadMenuOutputPort loadMenuOutputPort) {
+    this.loadMenuOutputPort = loadMenuOutputPort;
+  }
+
+  @Override
+  public Menu display() {
+    return loadMenuOutputPort.load();
+  }
 
 }

@@ -5,8 +5,8 @@ import com.github.maxicorrea.applicationdesktopbackend.domain.Menu;
 
 public interface ApplicationDesktopRepository {
 
-	void save(Feedback feedback);
+  void save(Feedback feedback);
 
-	Menu load();
+  Menu load();
 
 }

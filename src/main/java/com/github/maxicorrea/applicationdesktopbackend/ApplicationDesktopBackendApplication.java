@@ -13,23 +13,23 @@ import com.github.maxicorrea.applicationdesktopbackend.adapters.output.persisten
 @SpringBootApplication
 public class ApplicationDesktopBackendApplication {
 
-	@Bean
-	public ApplicationDesktopRepository applicationDesktopRepository() {
-		return new ApplicationDesktopInMemoryRepository();
-	}
-	
-	public static void main(String[] args) {
-		SpringApplication.run(ApplicationDesktopBackendApplication.class, args);
-	}
+  @Bean
+  public ApplicationDesktopRepository applicationDesktopRepository() {
+    return new ApplicationDesktopInMemoryRepository();
+  }
 
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("*");
-			}
-		};
-	}
-	
+  public static void main(String[] args) {
+    SpringApplication.run(ApplicationDesktopBackendApplication.class, args);
+  }
+
+  @Bean
+  public WebMvcConfigurer corsConfigurer() {
+    return new WebMvcConfigurer() {
+      @Override
+      public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**").allowedOrigins("*");
+      }
+    };
+  }
+
 }

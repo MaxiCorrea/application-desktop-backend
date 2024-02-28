@@ -11,16 +11,15 @@ import com.github.maxicorrea.applicationdesktopbackend.domain.Menu;
 @RestController
 public class ApplicationDesktopController {
 
-	private final DisplayMenuInputPort displayMenuInputPort;
-	
-	public ApplicationDesktopController(
-			 DisplayMenuInputPort displayMenuInputPort) {
-		this.displayMenuInputPort = displayMenuInputPort;
-	}
-	
-	@GetMapping("/")
-	public Menu getMenu() {
-		return displayMenuInputPort.display();
-	}
-	
+  private final DisplayMenuInputPort displayMenuInputPort;
+
+  public ApplicationDesktopController(DisplayMenuInputPort displayMenuInputPort) {
+    this.displayMenuInputPort = displayMenuInputPort;
+  }
+
+  @GetMapping("/")
+  public Menu getMenu() {
+    return displayMenuInputPort.display();
+  }
+
 }
